@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKOTELINKS LTD. | Premium Interior Stone Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#c5a059',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #1a1a1a;
+            --accent: #c5a059;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('floor1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .granite-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .touch-target {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        /* Dark mode specific overrides */
+        .dark .nav-glass {
+            background-color: rgba(28, 25, 23, 0.9);
+            border-color: rgba(68, 64, 60, 1);
+        }
+
+        .bod {
+            background-color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        }
+
+        .card {
+            
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            max-width: 28rem;
+            width: 90%;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-heading {
+            color: #1e293b;
+            font-size: 1.875rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        .card-description {
+            color: #64748b;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-footer {
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            background-color: #3b82f6;
+            color: white;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 nav-glass transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-bold tracking-tighter text-stone-800 dark:text-stone-100">
+              <a href="index.html">EKOTE<span class="text-[#c5a059]">LINKS</span></a>  
+            </div>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Home</a>
+                <a href="#gallery" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Collections</a>
+                <a href="#services" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Services</a>
+                
+                <!-- Theme Toggle Button -->
+                <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+
+                <a href="#contact" class="bg-stone-900 dark:bg-accent text-white dark:text-stone-950 px-6 py-2 rounded-full text-sm hover:bg-stone-700 dark:hover:opacity-90 transition-all font-bold">Book Consultation</a>
+            </div>
+
+            <!-- Mobile Actions -->
+            <div class="flex items-center space-x-2 md:hidden">
+                <button onclick="toggleTheme()" class="p-2 touch-target" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button class="text-2xl p-2 touch-target dark:text-stone-100" onclick="toggleMenu()" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-stone-900 z-[60] flex flex-col items-center justify-center space-y-8 text-white">
+        <button class="absolute top-6 right-6 text-4xl p-2 touch-target" onclick="toggleMenu()">&times;</button>
+        <a href="#home" class="text-3xl font-serif" onclick="toggleMenu()">Home</a>
+        <a href="#gallery" class="text-3xl font-serif" onclick="toggleMenu()">Collections</a>
+        <a href="#services" class="text-3xl font-serif" onclick="toggleMenu()">Services</a>
+        <a href="#contact" class="text-3xl font-serif" onclick="toggleMenu()">Contact</a>
+        <div class="pt-10 flex space-x-6 text-xl">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+    </div>
+
+    
+
+   
+
+    <section class="bod bg-white dark:bg-stone-900" >
+        <div class="card">
+        <h1 class="card-heading">Warranty</h1>
+        <p class="card-description">
+            This card displays a streamlined view of your current project. It features high-contrast typography and a responsive layout designed to look great on any device.
+        </p>
+        <div class="card-footer">
+            <a href="#" class="btn" onclick="return false;">View Details</a>
+        </div>
+    </div>
+
+    </section>
+     
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white dark:bg-stone-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl mb-4 dark:text-stone-100">Start Your Project</h2>
+                <p class="text-stone-500 dark:text-stone-400 text-sm md:text-base">Book a free design consultation and get a custom quote.</p>
+            </div>
+            
+            <div id="contact-success" class="hidden bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 p-6 rounded-lg text-center mb-8">
+                <p class="font-bold">Request received! Our specialist will contact you shortly.</p>
+            </div>
+
+            <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 bg-stone-50 dark:bg-stone-800 p-6 md:p-10 rounded-xl shadow-inner border border-transparent dark:border-stone-700">
+                <div class="flex flex-col space-y-2">
+                    <label class="text-[10px] font-bold uppercase text-stone-500 tracking-widest">Full Name</label>
+                    <input type="text" required class="p-3 border-b border-stone-300 dark:border-stone-600 bg-transparent focus:border-[#c5a059] outline-none transition-colors text-sm dark:text-stone-100">
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <label class="text-[10px] font-bold uppercase text-stone-500 tracking-widest">Email Address</label>
+                    <input type="email" required class="p-3 border-b border-stone-300 dark:border-stone-600 bg-transparent focus:border-[#c5a059] outline-none transition-colors text-sm dark:text-stone-100">
+                </div>
+                <div class="flex flex-col space-y-2 md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-stone-500 tracking-widest">Project Type</label>
+                    <select class="p-3 border-b border-stone-300 dark:border-stone-600 bg-transparent focus:border-[#c5a059] outline-none transition-colors text-sm dark:text-stone-100 appearance-none">
+                        <option class="dark:bg-stone-800">Residential Flooring</option>
+                        <option class="dark:bg-stone-800">Commercial Lobby</option>
+                        <option class="dark:bg-stone-800">Kitchen & Bathroom</option>
+                        <option class="dark:bg-stone-800">Custom Staircase</option>
+                        <option class="dark:bg-stone-800">Tomb stone</option>
+                    </select>
+                </div>
+                <div class="flex flex-col space-y-2 md:col-span-2">
+                    <label class="text-[10px] font-bold uppercase text-stone-500 tracking-widest">Message</label>
+                    <textarea rows="3" class="p-3 border-b border-stone-300 dark:border-stone-600 bg-transparent focus:border-[#c5a059] outline-none transition-colors text-sm dark:text-stone-100"></textarea>
+                </div>
+                <div class="md:col-span-2 text-center mt-6">
+                    <button type="submit" class="w-full sm:w-auto bg-stone-900 dark:bg-accent text-white dark:text-stone-950 px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-stone-700 dark:hover:opacity-90 transition-all shadow-lg text-xs">Send Inquiry</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-50 dark:bg-stone-950 py-12 md:py-16 border-t border-stone-200 dark:border-stone-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+            <div class="sm:col-span-2">
+                <div class="text-xl font-bold tracking-tighter text-stone-800 dark:text-stone-100 mb-6">
+                    EKOTE<span class="text-[#c5a059]">LINKS</span>
+                </div>
+                <p class="text-stone-500 dark:text-stone-400 text-sm max-w-sm mb-6 leading-relaxed">Redefining luxury through the permanence of natural stone. Premium granite solutions for modern living.</p>
+                <div class="flex space-x-6 text-xl text-stone-400">
+                    <a href="#" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-houzz"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4 md:mb-6 text-[10px] uppercase tracking-widest dark:text-stone-200">Office</h5>
+                <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed">
+                    Etioro, Ikare-Owo Rd.<br>
+                    Akungba akoko, Ondo State<br>
+                    Mon - Sat: 9:00 - 18:00<br>
+                    +234 803 584 9835
+                </p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4 md:mb-6 text-[10px] uppercase tracking-widest dark:text-stone-200">Legal</h5>
+                <ul class="text-stone-500 dark:text-stone-400 text-xs space-y-3">
+                    <li><a href="privacy.html" class="hover:text-stone-800 dark:hover:text-stone-100">Privacy Policy</a></li>
+                    <li><a href="" class="hover:text-stone-800 dark:hover:text-stone-100">Care Guide</a></li>
+                    <li><a href="#" class="hover:text-stone-800 dark:hover:text-stone-100">Warranty</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-stone-200 dark:border-stone-800 text-center text-stone-400 text-[10px] tracking-widest uppercase">
+            &copy; 2024 EKOTELINKS LTD.. Built for the modern home.
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management Logic
+        const initTheme = () => {
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        };
+
+        const toggleTheme = () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        };
+
+        initTheme();
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('contact-success').classList.remove('hidden');
+        });
+
+        const revealOnScroll = () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.9) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            section.style.transform = 'translateY(30px)';
+        });
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+</html>
