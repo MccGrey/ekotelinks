@@ -96,8 +96,8 @@
             <!-- Desktop Nav -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="index.html" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Home</a>
-                <a href="#gallery" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Collections</a>
-                <a href="#services" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Services</a>
+                <a href="gallery.html" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Collections</a>
+                <a href="index.html" class="nav-link text-sm font-semibold uppercase tracking-widest text-stone-600 dark:text-stone-300">Services</a>
                 
                 <!-- Theme Toggle Button -->
                 <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Theme">
@@ -125,8 +125,8 @@
     <div id="mobile-menu" class="fixed inset-0 bg-stone-900 z-[60] flex flex-col items-center justify-center space-y-8 text-white">
         <button class="absolute top-6 right-6 text-4xl p-2 touch-target" onclick="toggleMenu()">&times;</button>
         <a href="index.html" class="text-3xl font-serif" onclick="toggleMenu()">Home</a>
-        <a href="#gallery" class="text-3xl font-serif" onclick="toggleMenu()">Collections</a>
-        <a href="#services" class="text-3xl font-serif" onclick="toggleMenu()">Services</a>
+        <a href="gallery.html" class="text-3xl font-serif" onclick="toggleMenu()">Collections</a>
+        <a href="index.html" class="text-3xl font-serif" onclick="toggleMenu()">Services</a>
         <a href="#contact" class="text-3xl font-serif" onclick="toggleMenu()">Contact</a>
         <div class="pt-10 flex space-x-6 text-xl">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -147,7 +147,7 @@
                     <h2 class="text-3xl md:text-4xl mt-2 dark:text-stone-100">Signature Stones</h2>
                 </div>
                 <div>
-                    <button class="px-6 py-2 border-b-2 border-stone-900 dark:border-accent font-bold uppercase text-xs tracking-widest dark:text-stone-100"><a href="index.html"> <--back home</a></button>
+                    <button class="px-6 py-2 border-b-2 border-stone-900 dark:border-accent font-bold uppercase text-xs tracking-widest dark:text-stone-100"><a href="index.html"> ⬅︎ back home</a></button>
                 </div>
             </div>
 
@@ -158,25 +158,25 @@
                     <div class="overlay absolute inset-0 bg-black/60 md:opacity-0 opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8 text-white">
                         <h4 class="text-xl md:text-2xl mb-2">Black Galaxy</h4>
                         <p class="text-stone-300 text-xs md:text-sm mb-4">Deep obsidian base with copper and silver flecks.</p>
-                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Indian Origin</span>
+                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Kogi Origin</span>
                     </div>
                 </div>
                 <!-- Card 2 -->
                 <div class="granite-card relative overflow-hidden group h-[400px] md:h-[500px] cursor-pointer shadow-xl rounded-lg">
                     <img src="Nocturnal.jpg" alt="Alaskan White" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="overlay absolute inset-0 bg-black/60 md:opacity-0 opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8 text-white">
-                        <h4 class="text-xl md:text-2xl mb-2">Alaskan White</h4>
+                        <h4 class="text-xl md:text-2xl mb-2">Alaskan black</h4>
                         <p class="text-stone-300 text-xs md:text-sm mb-4">A frosty mix of silver, gray, and onyx.</p>
-                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Brazilian Origin</span>
+                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Bauchi Origin</span>
                     </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="granite-card relative overflow-hidden group h-[400px] md:h-[500px] cursor-pointer shadow-xl rounded-lg sm:col-span-2 lg:col-span-1">
                     <img src="downloa.jpg" alt="Blue Pearl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="overlay absolute inset-0 bg-black/60 md:opacity-0 opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8 text-white">
-                        <h4 class="text-xl md:text-2xl mb-2">Blue Pearl</h4>
+                        <h4 class="text-xl md:text-2xl mb-2">Grey Pearl</h4>
                         <p class="text-stone-300 text-xs md:text-sm mb-4">Metallic blue crystals in a deep gray matrix.</p>
-                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Norwegian Origin</span>
+                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Kogi Origin</span>
                     </div>
                 </div>
 
@@ -184,9 +184,9 @@
                 <div class="granite-card relative overflow-hidden group h-[400px] md:h-[500px] cursor-pointer shadow-xl rounded-lg sm:col-span-2 lg:col-span-1">
                     <video src="vidclip.mp4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loop muted autoplay></video>
                     <div class="overlay absolute inset-0 bg-black/60 md:opacity-0 opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8 text-white">
-                        <h4 class="text-xl md:text-2xl mb-2">Blue Pearl</h4>
-                        <p class="text-stone-300 text-xs md:text-sm mb-4">Metallic blue crystals in a deep gray matrix.</p>
-                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Norwegian Origin</span>
+                        <h4 class="text-xl md:text-2xl mb-2">White Pearl</h4>
+                        <p class="text-stone-300 text-xs md:text-sm mb-4">Metallic crystals in a deep gray matrix.</p>
+                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Borno Origin</span>
                     </div>
                 </div>
 
@@ -194,9 +194,9 @@
                 <div class="granite-card relative overflow-hidden group h-[400px] md:h-[500px] cursor-pointer shadow-xl rounded-lg sm:col-span-2 lg:col-span-1">
                     <img src="gift.jpg" alt="Blue Pearl" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="overlay absolute inset-0 bg-black/60 md:opacity-0 opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8 text-white">
-                        <h4 class="text-xl md:text-2xl mb-2">Blue Pearl</h4>
-                        <p class="text-stone-300 text-xs md:text-sm mb-4">Metallic blue crystals in a deep gray matrix.</p>
-                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Norwegian Origin</span>
+                        <h4 class="text-xl md:text-2xl mb-2">Ivory white</h4>
+                        <p class="text-stone-300 text-xs md:text-sm mb-4">Crystals in a deep gray matrix.</p>
+                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Ekiti Origin</span>
                     </div>
                 </div>
 
@@ -204,9 +204,9 @@
                 <div class="granite-card relative overflow-hidden group h-[400px] md:h-[500px] cursor-pointer shadow-xl rounded-lg sm:col-span-2 lg:col-span-1">
                     <video src="klink.mp4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loop muted autoplay></video>
                     <div class="overlay absolute inset-0 bg-black/60 md:opacity-0 opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 md:p-8 text-white">
-                        <h4 class="text-xl md:text-2xl mb-2">Blue Pearl</h4>
-                        <p class="text-stone-300 text-xs md:text-sm mb-4">Metallic blue crystals in a deep gray matrix.</p>
-                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Norwegian Origin</span>
+                        <h4 class="text-xl md:text-2xl mb-2">Alaskan white</h4>
+                        <p class="text-stone-300 text-xs md:text-sm mb-4">Metallic crystals in a deep gray matrix.</p>
+                        <span class="text-[#c5a059] font-bold text-[10px] tracking-tighter uppercase">Kogi Origin</span>
                     </div>
                 </div>
             </div>
@@ -266,25 +266,26 @@
                 </div>
                 <p class="text-stone-500 dark:text-stone-400 text-sm max-w-sm mb-6 leading-relaxed">Redefining luxury through the permanence of natural stone. Premium granite solutions for modern living.</p>
                 <div class="flex space-x-6 text-xl text-stone-400">
-                    <a href="#" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-pinterest"></i></a>
-                    <a href="#" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-houzz"></i></a>
+                    <a href="https://www.instagram.com" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/+2348035849835" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="index.html" class="hover:text-[#c5a059] transition-colors"><i class="fa-brands fa-houzz"></i></a>
                 </div>
             </div>
             <div>
                 <h5 class="font-bold mb-4 md:mb-6 text-[10px] uppercase tracking-widest dark:text-stone-200">Office</h5>
                 <p class="text-stone-500 dark:text-stone-400 text-xs leading-relaxed">
-                    1204 Marble Plaza<br>
-                    Quarry District, NY 10001<br>
-                    Mon - Sat: 9:00 - 18:00
+                    Etioro, Ikare-Owo Rd.<br>
+                    Akungba akoko, Ondo State<br>
+                    Mon - Sat: 9:00 - 18:00<br>
+                    +234 803 584 9835
                 </p>
             </div>
             <div>
                 <h5 class="font-bold mb-4 md:mb-6 text-[10px] uppercase tracking-widest dark:text-stone-200">Legal</h5>
                 <ul class="text-stone-500 dark:text-stone-400 text-xs space-y-3">
-                    <li><a href="#" class="hover:text-stone-800 dark:hover:text-stone-100">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-stone-800 dark:hover:text-stone-100">Care Guide</a></li>
-                    <li><a href="#" class="hover:text-stone-800 dark:hover:text-stone-100">Warranty</a></li>
+                    <li><a href="privacy.html" class="hover:text-stone-800 dark:hover:text-stone-100">Privacy Policy</a></li>
+                    <li><a href="guide.html" class="hover:text-stone-800 dark:hover:text-stone-100">Care Guide</a></li>
+                    <li><a href="waranty.html" class="hover:text-stone-800 dark:hover:text-stone-100">Warranty</a></li>
                 </ul>
             </div>
         </div>
